@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: url(../imagens/Walpaper.png) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 35rem;
+    height: 40rem;
+    background: transparent;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+    text-align: center;
+}
+
+.logo{
+    margin-top: 1rem;
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+.login{
+    margin-top: 0.5rem;
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.container-form-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login{
+    margin-top: 2.5rem;
+    width: 22rem;
+}
+
+.nick-login{
+    margin-left: 1rem;
+    color: #fff;
+    text-align: left;
+    font-size: 2rem;
+}
+
+.input-login{
+    width: 20rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 0 0 0 20px;
+    color:#000;
+    font-size: 1.2rem;
+}
+
+.container-btnLogin{
+    width: 100%;
+}
+
+.btnLogar{
+    margin-top: 3rem;
+    width: 21rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.btnLogar:hover{
+    background: #ffffff;
+    color: #000000;
+    transition: 1.5s;
+}
+
+.nome-senha{
+    margin-left: 1rem;
+    color: #fff;
+    text-align: left;
+    font-size: 1.7rem;
+}
+
+.input-senha{
+    width: 20rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 0 0 0 20px;
+    color:#000;
+    font-size: 1.2rem;
+}
+
+.form-senha{
+    margin-top: 1rem;
+    width: 22rem;
+}
+
+.texto-cadastro{
+    margin-top: 1rem;
+    color: #ffffff;
+}
+
+.btnCadastrar{
+    width: 21rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.btnCadastrar:hover{
+    background: #ffffff;
+    color: #000000;
+    transition: 1.5s;
+}
