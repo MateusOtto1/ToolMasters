@@ -54,7 +54,7 @@ body {
     margin-left: 1rem;
     color: #fff;
     text-align: left;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .input-login{
@@ -119,7 +119,7 @@ body {
     color: #ffffff;
 }
 
-.btnCadastrar{
+.btnCadastrar-se{
     width: 21rem;
     height: 3rem;
     border: none;
@@ -131,8 +131,85 @@ body {
     cursor: pointer;
 }
 
+.btnCadastrar-se:hover{
+    background: #ffffff;
+    color: #000000;
+    transition: 1.5s;
+}
+
+/* Tela Cadastro */
+
+.btnCadastrar{
+    width: 21rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
 .btnCadastrar:hover{
     background: #ffffff;
     color: #000000;
     transition: 1.5s;
+}
+
+/* Tela Home */
+
+.nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.logo{
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    color: #000000;
+}
+
+.ferramentas {
+    font-size: 20px;
+    margin-left: 5vw;
+    color: #000000;
+    font-weight: 600;
+}
+
+.novidades {
+    font-size: 20px;
+    margin-left: 1vw;
+    color: #000000;
+    font-weight: 600;
+}
+
+.ferramentas:hover {
+    color: #F99D5A;
+}
+
+.novidades:hover {
+    color: #F99D5A;
+}
+
+.container-escolhas{
+    margin-top: 4.8rem;
+    width: 20vw;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+    background: transparent;
+    border: 2px solid #fff;
+    backdrop-filter: blur(9px);
+    text-align: center;
 }
