@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
+
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -8,71 +9,81 @@
 
 body {
     width: 100%;
+}
+
+.container-tudo {
+    width: 100%;
     min-height: 100vh;
     background: url(../imagens/Walpaper.png) no-repeat;
     background-size: cover;
+}
+
+.container-tudo-preto{
+    width: 100%;
+    min-height: 100vh;
+    background: #0000008a;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container{
+.container {
     width: 35rem;
     height: 40rem;
     background: transparent;
     border-radius: 20px;
     border: 2px solid #fff;
     justify-content: center;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(4px);
     text-align: center;
 }
 
-.logo{
+.logo {
     margin-top: 1rem;
     font-size: 3rem;
     color: #ffffff;
 }
 
-.login{
+.login {
     margin-top: 0.5rem;
     font-size: 2.5rem;
     color: #ffffff;
 }
 
-.container-form-login{
+.container-form-login {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.form-login{
+.form-login {
     margin-top: 2.5rem;
     width: 22rem;
 }
 
-.nick-login{
+.nick-login {
     margin-left: 1rem;
     color: #fff;
     text-align: left;
     font-size: 1.7rem;
 }
 
-.input-login{
+.input-login {
     width: 20rem;
     height: 3rem;
     border: none;
     outline: none;
     border-radius: 30px;
     padding: 0 0 0 20px;
-    color:#000;
+    color: #000;
     font-size: 1.2rem;
 }
 
-.container-btnLogin{
+.container-btnLogin {
     width: 100%;
 }
 
-.btnLogar{
+.btnLogar {
     margin-top: 3rem;
     width: 21rem;
     height: 3rem;
@@ -85,41 +96,41 @@ body {
     cursor: pointer;
 }
 
-.btnLogar:hover{
+.btnLogar:hover {
     background: #ffffff;
     color: #000000;
     transition: 1.5s;
 }
 
-.nome-senha{
+.nome-senha {
     margin-left: 1rem;
     color: #fff;
     text-align: left;
     font-size: 1.7rem;
 }
 
-.input-senha{
+.input-senha {
     width: 20rem;
     height: 3rem;
     border: none;
     outline: none;
     border-radius: 30px;
     padding: 0 0 0 20px;
-    color:#000;
+    color: #000;
     font-size: 1.2rem;
 }
 
-.form-senha{
+.form-senha {
     margin-top: 1rem;
     width: 22rem;
 }
 
-.texto-cadastro{
+.texto-cadastro {
     margin-top: 1rem;
     color: #ffffff;
 }
 
-.btnCadastrar-se{
+.btnCadastrar-se {
     width: 21rem;
     height: 3rem;
     border: none;
@@ -131,7 +142,7 @@ body {
     cursor: pointer;
 }
 
-.btnCadastrar-se:hover{
+.btnCadastrar-se:hover {
     background: #ffffff;
     color: #000000;
     transition: 1.5s;
@@ -139,7 +150,7 @@ body {
 
 /* Tela Cadastro */
 
-.btnCadastrar{
+.btnCadastrar {
     width: 21rem;
     height: 3rem;
     border: none;
@@ -152,7 +163,7 @@ body {
     margin-top: 2rem;
 }
 
-.btnCadastrar:hover{
+.btnCadastrar:hover {
     background: #ffffff;
     color: #000000;
     transition: 1.5s;
@@ -163,11 +174,12 @@ body {
 .nav {
     width: 100%;
     position: fixed;
+    display: block;
     top: 0;
     z-index: 1;
 }
 
-.logo{
+.logo-home {
     margin-left: 1.5rem;
     font-size: 1.8rem;
     margin-top: 0.5rem;
@@ -196,20 +208,334 @@ body {
     color: #F99D5A;
 }
 
-.container-escolhas{
-    margin-top: 4.8rem;
-    width: 20vw;
-    height:100%;
+.container-imgFundo {
+    width: 100%;
+    height: 90vh;
+    background: url(../imagens/BannerHome.jpg) no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container-imgBackground {
+    width: 100%;
+    height: 100%;
+    background: #0000009a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-texto {
+    margin-top: 4.8rem;
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    color: #fff;
+}
+
+.btnCadastrarFerramenta {
+    width: 25rem;
+    height: 4rem;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #000000;
+    font-size: 1.9rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.btnCadastrarFerramenta:hover {
+    background: #383838;
+    color: #ffffff;
+    transition: 1.5s;
+}
+
+.ferramentasCadastradas {
+    width: 100%;
+    color: #fff;
+    background-color: #000000;
+    text-align: center;
+}
+
+.texto-ferramentasCadastradas {
+    margin: 0;
+}
+
+.toolMaster {
+    padding: 2rem;
+    margin: 0;
+    color: #ffffffe0;
+}
+
+.container__fundo_card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000000;
+}
+
+.container__card {
+    width: 90%;
+    margin: auto;
+    perspective: 1000px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     background-color: #000;
+}
+
+.card__father {
+    margin-top: 3rem;
+    perspective: 1000px;
+    border: none;
+}
+
+.card__father:hover .card {
+    transform: rotateY(180deg);
+}
+
+
+.card {
+    width: 22rem;
+    height: 30rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 1s;
+    border: none;
+    background: #000000cb;
+}
+
+.card__front {
+    background-size: cover;
+    background-position: center;
+}
+
+.card__front,
+.card__back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
     top: 0;
     left: 0;
-    position: fixed;
-    z-index: 1000;
-    background: transparent;
-    border: 2px solid #fff;
-    backdrop-filter: blur(9px);
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border: none;
+}
+
+.card__back {
+    transform: rotateY(180deg);
+    background: url(../imagens/Walpaper.png) no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+
+.body__card_front {
+    width: 100%;
+    height: 100%;
     text-align: center;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transform: translateZ(60px);
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0000007c;
+}
+
+.body__card_back {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    text-align: center;
+    transform: translateZ(60px);
+    background: #000000be;
+}
+
+/* Cadastro de Ferramentas */
+
+.container-cadastro-ferramenta{
+    width: 35rem;
+    height: 50rem;
+    background: transparent;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+.nome-ferramenta {
+    margin-left: 1rem;
+    color: #fff;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.input-nome-ferramenta {
+    width: 20rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 0 0 0 20px;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.descricao-ferramenta {
+    margin-left: 1rem;
+    color: #fff;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.input-descricao-ferramenta {
+    width: 20rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 0 0 0 20px;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.codigo-ferramenta {
+    margin-left: 1rem;
+    color: #fff;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.input-codigo-ferramenta {
+    width: 20rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 0 0 0 20px;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.serie-ferramenta {
+    margin-left: 1rem;
+    color: #fff;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.input-serie-ferramenta {
+    width: 20rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 0 0 0 20px;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.imagem-ferramenta{
+    margin-left: 1rem;
+    color: #fff;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.input-imagem-ferramenta {
+    width: 20rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 0 0 0 20px;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.footer {
+    background-color: #0f0f0f;
+    width: 100%;
+}
+
+.logoFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.logoFooter:hover{
+    color: #F99D5A;
+}
+
+.follow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.footer .follow{
+    padding: 1rem 0;
+}
+
+.footer .follow a{
+    height:3.5rem;
+    line-height:3.5rem;
+    width:3.5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: #ffffff;
+    color:#000000;
+    margin:0 .1rem;
+    text-align: center;
+}
+
+.footer .follow a:hover{
+    background-color: #F99D5A;
+    color: #000000;
+}
+
+@media (max-width: 900px) {
+    .container-texto {
+        width: 90%;
+        margin-top: 0;
+    }
+
+    .btnCadastrarFerramenta {
+        width: 20rem;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .container-texto {
+        width: 95%;
+        margin-top: 0;
+    }
+
+    .btnCadastrarFerramenta {
+        width: 18rem;
+        height: 3rem;
+        font-size: 1.2rem;
+    }
 }
