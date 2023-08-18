@@ -10,15 +10,27 @@ const port = 5000;
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(expressLayouts);
-app.set('layout', './layouts/default/index');
 app.use(express.urlencoded({ extended: true }));
-app.get('/', loginController.getLogin);
 
-app.get('/home', homeController.getHome);
+app.get('/', (req, res)=>{
+    app.set('layout', './layouts/default/login');
+    loginController.getLogin(req, res);
+});
 
-app.get('/cadastro', cadastroController.getCadastro);
+app.get('/home', (req, res) =>{
+    app.set('layout', './layouts/default/index');
+    homeController.getHome(req, res);
+});
 
-app.get('/cadastroFerramenta', cadastroFerramentaController.getCadastroFerramenta);
+app.get('/cadastro', (req, res) =>{
+    app.set('layout', './layouts/default/login');
+    cadastroController.getCadastro(req, res);
+});
+
+app.get('/cadastroFerramenta', (req, res) =>{
+    app.set('layout', './layouts/default/login');
+    cadastroFerramentaController.getCadastroFerramenta(req, res);
+});
 
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);

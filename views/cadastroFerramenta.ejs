@@ -3,7 +3,7 @@
     <div class="container-cadastro-ferramenta">
         <h2 class="login">Cadastro da sua Ferramenta</h2>
         <div class="container-form-login">
-            <form class="form-login">
+            <form class="form-cadastro-ferramenta">
                 <h2 class="nome-ferramenta">Nome da ferramenta</h2>
                 <input class="input-nome-ferramenta" type="text" name="nome" placeholder="Nome...">
             </form>
@@ -29,11 +29,17 @@
         <div class="container-form-login">
             <form class="form-senha">
                 <h2 class="imagem-ferramenta">Imagem da ferramenta</h2>
-                <input class="input-imagem-ferramenta" type="text" name="nome" placeholder="URL...">
+                <label class="input-imagem-ferramenta">
+                    <input type="file">
+                    <h4 class="escolher-arquivo">Escolher arquivo</h4>
+                </label>
             </form>
         </div>
         <form class="container-btnLogin" action="/home" method="GET">
             <button class="btnCadastrar">Cadastrar</button>
+        </form>
+        <form class="container-btnLogin" action="/home" method="GET">
+            <button class="btnVoltar">Voltar</button>
         </form>
     </div>
 </div>

@@ -9,19 +9,19 @@
 
 body {
     width: 100%;
+    background-color: #000;
 }
 
 .container-tudo {
     width: 100%;
     min-height: 100vh;
-    background: url(../imagens/Walpaper.png) no-repeat;
+    background: url(../imagens/Walpaper2.png) no-repeat;
     background-size: cover;
 }
 
 .container-tudo-preto{
     width: 100%;
     min-height: 100vh;
-    background: #0000008a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,6 +169,25 @@ body {
     transition: 1.5s;
 }
 
+.btnVoltar {
+    width: 21rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btnVoltar:hover {
+    background: #ffffff;
+    color: #000000;
+    transition: 1.5s;
+}
+
 /* Tela Home */
 
 .nav {
@@ -176,7 +195,7 @@ body {
     position: fixed;
     display: block;
     top: 0;
-    z-index: 1;
+    z-index: 1000000;
 }
 
 .logo-home {
@@ -208,9 +227,20 @@ body {
     color: #F99D5A;
 }
 
+.container-body::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, #000000,#000000,transparent) !important;
+    z-index: 100000 !important;
+    height: 20%;
+    width: 100%;
+    border: none !important;
+}
+
 .container-imgFundo {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     background: url(../imagens/BannerHome.jpg) no-repeat;
     background-size: cover;
     display: flex;
@@ -246,7 +276,7 @@ body {
     font-size: 1.9rem;
     cursor: pointer;
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .btnCadastrarFerramenta:hover {
@@ -289,6 +319,7 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     background-color: #000;
+    margin-bottom: 5rem;
 }
 
 .card__father {
@@ -301,7 +332,6 @@ body {
     transform: rotateY(180deg);
 }
 
-
 .card {
     width: 22rem;
     height: 30rem;
@@ -310,6 +340,7 @@ body {
     transition: all 1s;
     border: none;
     background: #000000cb;
+    text-align: center;
 }
 
 .card__front {
@@ -327,6 +358,7 @@ body {
     backface-visibility: hidden;
     transform-style: preserve-3d;
     border: none;
+    text-align: center;
 }
 
 .card__back {
@@ -334,6 +366,7 @@ body {
     background: url(../imagens/Walpaper.png) no-repeat;
     background-size: cover;
     color: #ffffff;
+    text-align: center;
 }
 
 .body__card_front {
@@ -349,6 +382,7 @@ body {
 }
 
 .bg {
+    text-align: center;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -366,6 +400,140 @@ body {
     background: #000000be;
 }
 
+.container-minhas-ferramentas{
+    margin-top: 4vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000000;
+}
+
+.explicacao-minhas-ferramentas{
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+    color: #ffffff;
+}
+
+.container-explica-ferramentas{
+    width: 80%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000000;
+}
+
+.texto-minhas-ferramentas{
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.container__fundo_card2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url(../imagens/BannerHome2.png) no-repeat;
+    background-size: cover;
+}
+
+.container-tudo-preto-home{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000088;
+}
+
+.container__card2 {
+    width: 90%;
+    margin: auto;
+    perspective: 1000px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+.cardExplicacao{
+    margin-top: 5vh;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #00070cce;
+    text-align: center;
+    text-align: left;
+    color:#ffffff;
+    border-radius: 10px;
+}
+
+.cardExplicacao-titulo{
+    margin-top: 2.5vh;
+    margin-left: 2vw;
+    font-size: 25pt;
+}
+
+.cardExplicacao-texto{
+    margin-left: 2vw;
+    margin-top: 2vh;
+    font-size: 20pt;
+}
+
+.imgCard-explicacao{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: #0f0f0f;
+    width: 100%;
+}
+
+.logoFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.logoFooter:hover{
+    color: #F99D5A;
+}
+
+.follow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.footer .follow{
+    padding: 1rem 0;
+}
+
+.footer .follow a{
+    height:3.5rem;
+    line-height:3.5rem;
+    width:3.5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: #ffffff;
+    color:#000000;
+    margin:0 .1rem;
+    text-align: center;
+}
+
+.footer .follow a:hover{
+    background-color: #F99D5A;
+    color: #000000;
+}
+
 /* Cadastro de Ferramentas */
 
 .container-cadastro-ferramenta{
@@ -377,6 +545,11 @@ body {
     justify-content: center;
     backdrop-filter: blur(4px);
     text-align: center;
+}
+
+.form-cadastro-ferramenta {
+    margin-top: 1rem;
+    width: 22rem;
 }
 
 .nome-ferramenta {
@@ -464,54 +637,24 @@ body {
     border: none;
     outline: none;
     border-radius: 30px;
-    padding: 0 0 0 20px;
     color: #000;
     font-size: 1.2rem;
+    position: relative;
+    background-color: #fff;
+    cursor: pointer; 
 }
 
-.footer {
-    background-color: #0f0f0f;
-    width: 100%;
-}
+.input-imagem-ferramenta input[type="file"] {
+    display: none;
+  }
 
-.logoFooter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-}
-
-.logoFooter:hover{
-    color: #F99D5A;
-}
-
-.follow{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-}
-
-.footer .follow{
-    padding: 1rem 0;
-}
-
-.footer .follow a{
-    height:3.5rem;
-    line-height:3.5rem;
-    width:3.5rem;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    background: #ffffff;
-    color:#000000;
-    margin:0 .1rem;
+.escolher-arquivo{
+    width:100%;
+    height:100%;
     text-align: center;
-}
-
-.footer .follow a:hover{
-    background-color: #F99D5A;
-    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 900px) {
