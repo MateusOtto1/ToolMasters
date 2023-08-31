@@ -1,46 +1,49 @@
 <div class="container-tudo">
     <div class="container-tudo-preto">
-    <div class="container-cadastro-ferramenta">
-        <h2 class="login">Cadastro da sua Ferramenta</h2>
-        <div class="container-form-login">
-            <form class="form-cadastro-ferramenta">
-                <h2 class="nome-ferramenta">Nome da ferramenta</h2>
-                <input class="input-nome-ferramenta" type="text" name="nome" placeholder="Nome...">
+        <div class="container-cadastro-ferramenta">
+            <h2 class="login">Cadastro da sua Ferramenta</h2>
+            <form action="" method="">
+                <div class="container-form-login">
+                    <div class="form-cadastro-ferramenta">
+                        <h2 class="nome-ferramenta">Nome da ferramenta</h2>
+                        <input class="input-nome-ferramenta" type="text" name="nomeFerramenta" for="nomeFerramenta" placeholder="Nome..." required>
+                    </div>
+                </div>
+                <div class="container-form-login">
+                    <div class="form-senha">
+                        <h2 class="descricao-ferramenta">Descrição da Ferramenta</h2>
+                        <input class="input-descricao-ferramenta" type="text" name="descricaoFerramenta" for="descricaoFerramenta" placeholder="Descrição..." required>
+                    </div>
+                </div>
+                <div class="container-form-login">
+                    <div class="form-senha">
+                        <h2 class="codigo-ferramenta">Código da Ferramenta</h2>
+                        <input class="input-codigo-ferramenta" type="number" name="codigoFerramenta" for="codigoFerramenta" placeholder="Código..."
+                            required>
+                    </div>
+                </div>
+                <div class="container-form-login">
+                    <div class="form-senha">
+                        <h2 class="serie-ferramenta">Nº de série da Ferramenta</h2>
+                        <input class="input-serie-ferramenta" type="number" name="numeroFerramenta" for="numeroFerramenta" placeholder="Nº..." required>
+                    </div>
+                </div>
+                <div class="container-form-login">
+                    <div class="form-senha">
+                        <h2 class="imagem-ferramenta">Imagem da ferramenta</h2>
+                        <label class="input-imagem-ferramenta">
+                            <input type="file" name="imagem" for="imagem">
+                            <h4 class="escolher-arquivo">Escolher arquivo</h4>
+                        </label>
+                    </div>
+                </div>
+                <div class="container-btnLogin">
+                    <button class="btnCadastrar">Cadastrar</button>
+                </div>
+            </form>
+            <form class="container-btnLogin" action="/home" method="GET">
+                <button class="btnVoltar">Voltar</button>
             </form>
         </div>
-        <div class="container-form-login">
-            <form class="form-senha">
-                <h2 class="descricao-ferramenta">Descrição da Ferramenta</h2>
-                <input class="input-descricao-ferramenta" type="text" name="nome" placeholder="Descrição...">
-            </form>
-        </div>
-        <div class="container-form-login">
-            <form class="form-senha">
-                <h2 class="codigo-ferramenta">Código da Ferramenta</h2>
-                <input class="input-codigo-ferramenta" type="number" name="nome" placeholder="Código...">
-            </form>
-        </div>
-        <div class="container-form-login">
-            <form class="form-senha">
-                <h2 class="serie-ferramenta">Nº de série da Ferramenta</h2>
-                <input class="input-serie-ferramenta" type="number" name="nome" placeholder="Nº...">
-            </form>
-        </div>
-        <div class="container-form-login">
-            <form class="form-senha">
-                <h2 class="imagem-ferramenta">Imagem da ferramenta</h2>
-                <label class="input-imagem-ferramenta">
-                    <input type="file">
-                    <h4 class="escolher-arquivo">Escolher arquivo</h4>
-                </label>
-            </form>
-        </div>
-        <form class="container-btnLogin" action="/home" method="GET">
-            <button class="btnCadastrar">Cadastrar</button>
-        </form>
-        <form class="container-btnLogin" action="/home" method="GET">
-            <button class="btnVoltar">Voltar</button>
-        </form>
     </div>
-</div>
 </div>

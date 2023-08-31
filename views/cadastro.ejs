@@ -2,26 +2,28 @@
     <div class="container-tudo-preto">
         <div class="container">
             <h2 class="login">Cadastro</h2>
-            <div class="container-form-login">
-                <form class="form-login">
-                    <h2 class="nick-login">Nome do usuário</h2>
-                    <input class="input-login" type="text" name="nome" placeholder="Nome...">
-                </form>
-            </div>
-            <div class="container-form-login">
-                <form class="form-senha">
-                    <h2 class="nome-senha">Email do usuário</h2>
-                    <input class="input-senha" type="email" name="nome" placeholder="Email...">
-                </form>
-            </div>
-            <div class="container-form-login">
-                <form class="form-senha">
-                    <h2 class="nome-senha">Senha do usuário</h2>
-                    <input class="input-senha" type="password" name="nome" placeholder="Senha...">
-                </form>
-            </div>
-            <form class="container-btnLogin" action="/home" method="GET">
-                <button class="btnCadastrar">Cadastrar</button>
+            <form action="/cadastro" method="post">
+                <div class="container-form-login">
+                    <div class="form-login">
+                        <h2 class="nick-login">Nome do usuário</h2>
+                        <input class="input-login" type="text" name="nome" for="nome" placeholder="Nome..." required>
+                    </div>
+                </div>
+                <div class="container-form-login">
+                    <div class="form-senha">
+                        <h2 class="nome-senha">Email do usuário</h2>
+                        <input class="input-senha" type="email" name="email" for="email" placeholder="Email..." required>
+                    </div>
+                </div>
+                <div class="container-form-login">
+                    <div class="form-senha">
+                        <h2 class="nome-senha">Senha do usuário</h2>
+                        <input class="input-senha" type="password" name="senha" for="senha" placeholder="Senha..." required>
+                    </div>
+                </div>
+                <div class="container-btnLogin">
+                    <button class="btnCadastrar">Cadastrar</button>
+                </div>
             </form>
             <form class="container-btnLogin" action="/" method="GET">
                 <button class="btnVoltar">Voltar</button>

@@ -1,5 +1,30 @@
-function getCadastro(req, res){
+const userModel = require('../models/userModel');
+
+function getCadastro(req, res) {
     res.render('cadastro');
 }
 
-module.exports = { getCadastro };
+async function verificaCadastro(req, res) {
+    const { nome, email, senha } = req.body;
+
+    try {
+        const encontraUsuario = await userModel.verificaEmail(email);
+        if (encontraUsuario) {
+            console.log("Usuário já cadastrado");
+            res.redirect('/');
+        } else {
+            const cadastraUsuario = await userModel.cadastraUsuario(nome, email, senha);
+            if (cadastraUsuario) {
+                res.redirect('/home');
+            } else {
+                console.log("Usuário não cadastrado");
+                res.redirect('/cadastro');
+            }
+        }
+    } catch (error) {
+        console.error('Erro ao realizar o cadastro:', error);
+        res.redirect('/');
+    }
+}
+
+module.exports = { getCadastro, verificaCadastro };

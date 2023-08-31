@@ -6,7 +6,10 @@ const cadastroController = require('./controllers/cadastroController');
 const cadastroFerramentaController = require('./controllers/cadastroFerramentaController');
 const app = express();
 const port = 5000;
+const session = require("express-session");
 
+app.use(express.json());
+app.use(session({secret:"ToolMasters"}));
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(expressLayouts);
@@ -17,6 +20,10 @@ app.get('/', (req, res)=>{
     loginController.getLogin(req, res);
 });
 
+app.post('/', (req, res)=>{
+    loginController.verificaLogin(req, res);
+});
+
 app.get('/home', (req, res) =>{
     app.set('layout', './layouts/default/index');
     homeController.getHome(req, res);
@@ -25,6 +32,10 @@ app.get('/home', (req, res) =>{
 app.get('/cadastro', (req, res) =>{
     app.set('layout', './layouts/default/login');
     cadastroController.getCadastro(req, res);
+});
+
+app.post('/cadastro', (req,res)=>{
+    cadastroController.verificaCadastro(req, res);
 });
 
 app.get('/cadastroFerramenta', (req, res) =>{

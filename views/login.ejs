@@ -3,20 +3,22 @@
         <div class="container">
             <h1 class="logo">ToolMasters</h1>
             <h2 class="login">Login</h2>
-            <div class="container-form-login">
-                <form class="form-login">
-                    <h2 class="nick-login">Email do usuário</h2>
-                    <input class="input-login" type="email" name="nome" placeholder="Email...">
-                </form>
-            </div>
-            <div class="container-form-login">
-                <form class="form-senha">
-                    <h2 class="nome-senha">Senha do usuário</h2>
-                    <input class="input-senha" type="password" name="nome" placeholder="Senha...">
-                </form>
-            </div>
-            <form class="container-btnLogin" action="/home" method="GET">
-                <button class="btnLogar">Logar</button>
+            <form action="/" method="post">
+                <div class="container-form-login">
+                    <div class="form-login">
+                        <h2 class="nick-login">Email do usuário</h2>
+                        <input class="input-login" type="email" for="email" name="email" placeholder="Email..." required>
+                    </div>
+                </div>
+                <div class="container-form-login">
+                    <div class="form-senha">
+                        <h2 class="nome-senha">Senha do usuário</h2>
+                        <input class="input-senha" type="password" name="senha" for="senha" placeholder="Senha..." required>
+                    </div>
+                </div>
+                <div class="container-btnLogin">
+                    <button class="btnLogar">Logar</button>
+                </div>
             </form>
             <form class="container-btnLogin" action="/cadastro" method="GET">
                 <h4 class="texto-cadastro">Não possui uma conta?</h4>

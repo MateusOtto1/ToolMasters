@@ -1,5 +1,7 @@
+const AutenticacaoHome = require('./midlewareController');
+
 function getHome(req, res){
-    res.render('home');
+    AutenticacaoHome.AutenticacaoHome(req, res);
 }
 
 module.exports = { getHome };
