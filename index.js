@@ -4,6 +4,7 @@ const loginController = require('./controllers/loginController');
 const homeController = require('./controllers/homeController');
 const cadastroController = require('./controllers/cadastroController');
 const cadastroFerramentaController = require('./controllers/cadastroFerramentaController');
+const minhasFerramentasController = require('./controllers/minhasFerramentasController');
 const app = express();
 const port = 5000;
 const session = require("express-session");
@@ -41,6 +42,24 @@ app.post('/cadastro', (req,res)=>{
 app.get('/cadastroFerramenta', (req, res) =>{
     app.set('layout', './layouts/default/login');
     cadastroFerramentaController.getCadastroFerramenta(req, res);
+});
+
+app.post('/cadastroFerramenta', (req,res)=>{
+    cadastroFerramentaController.cadastroFerramenta(req, res);
+});
+
+app.get('/minhasFerramentas', (req, res) =>{
+    app.set('layout', './layouts/default/index');
+    minhasFerramentasController.getMinhasFerramentas(req, res);
+});
+
+app.get('/editar:id', (req, res) =>{
+    app.set('layout', './layouts/default/login');
+    minhasFerramentasController.getEditar(req, res);
+});
+
+app.post('/editar:id', (req, res) =>{
+    minhasFerramentasController.editar(req, res);
 });
 
 app.listen(port, () => {
