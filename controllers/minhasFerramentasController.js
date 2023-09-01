@@ -22,7 +22,7 @@ function getEditar(req, res){
     console.log(idcadastro_ferramenta);
 }
 
-async function editar(req, res){
+async function editarFerramenta(req, res){
     const { idcadastro_ferramenta, nome_ferramenta, descricao, codigo, numero_serie, imagem } = req.body;
     console.log(idcadastro_ferramenta);
     try {
@@ -40,4 +40,4 @@ async function editar(req, res){
     }
 }
 
-module.exports = { getMinhasFerramentas, getEditar, editar };
+module.exports = { getMinhasFerramentas, getEditar, editarFerramenta };

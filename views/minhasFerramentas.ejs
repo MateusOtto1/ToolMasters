@@ -35,7 +35,7 @@
                         </div>
                         <div class="card__back">
                             <div class="body__card_back">
-                                <form class="container-btnLogin" action="/editar:<%= ferramentas[i].idcadastro_ferramenta %>" method="get">
+                                <form class="container-btnLogin" action="/editarFerramenta/<%= ferramentas[i].idcadastro_ferramenta %>" method="get">
                                     <button class="btnEditar">Editar</button>
                                 </form>
                                 <h3 class="nome-ferramenta-home">
@@ -53,7 +53,7 @@
                                 <h4 class="numero-serie-ferramenta-home">
                                     <%= ferramentas[i].numero_serie %>
                                 </h4>
-                                <form class="container-btnLogin" action="/excluir:<%= ferramentas[i].idcadastro_ferramenta %>" method="post">
+                                <form class="container-btnLogin" action="/excluir/<%= ferramentas[i].idcadastro_ferramenta %>" method="post">
                                     <button class="btnExcluir">Excluir</button>
                                 </form>
                             </div>

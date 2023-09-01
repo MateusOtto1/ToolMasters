@@ -53,13 +53,13 @@ app.get('/minhasFerramentas', (req, res) =>{
     minhasFerramentasController.getMinhasFerramentas(req, res);
 });
 
-app.get('/editar:id', (req, res) =>{
+app.get('/editarFerramenta/:id', (req, res) =>{
     app.set('layout', './layouts/default/login');
     minhasFerramentasController.getEditar(req, res);
 });
 
-app.post('/editar:id', (req, res) =>{
-    minhasFerramentasController.editar(req, res);
+app.post('/editarFerramenta/:id', (req, res) =>{
+    minhasFerramentasController.editarFerramenta(req, res);
 });
 
 app.listen(port, () => {
