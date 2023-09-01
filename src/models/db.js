@@ -6,7 +6,7 @@ async function connection() {
             return global.connection;
         }
         const connection = await mysql.createConnection({
-            url: 'mysql://root:1fFl2Xq6jIE8ePuxnSAE@containers-us-west-163.railway.app:7334/railway',
+            url: "mysql://root:1fFl2Xq6jIE8ePuxnSAE@containers-us-west-163.railway.app:7334/railway",
             host: 'containers-us-west-163.railway.app',
             user: 'root',
             password: '1fFl2Xq6jIE8ePuxnSAE',
