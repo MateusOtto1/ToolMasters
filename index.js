@@ -49,21 +49,21 @@ app.post('/cadastroFerramenta', (req,res)=>{
     cadastroFerramentaController.cadastroFerramenta(req, res);
 });
 
-app.get('/minhasFerramentas', Autenticacao,(req, res) =>{
+app.get('https://toolmasters-api.onrender.com/minhasFerramentas', Autenticacao,(req, res) =>{
     app.set('layout', './layouts/default/index');
     minhasFerramentasController.getMinhasFerramentas(req, res);
 });
 
-app.get('/editarFerramenta:id', Autenticacao, (req, res) =>{
+app.get('https://toolmasters-api.onrender.com/editarFerramenta:id', Autenticacao, (req, res) =>{
     app.set('layout', './layouts/default/login');
     minhasFerramentasController.getEditar(req, res);
 });
 
-app.post('/editarFerramenta:id', (req, res) =>{
+app.post('https://toolmasters-api.onrender.com/editarFerramenta:id', (req, res) =>{
     minhasFerramentasController.editarFerramenta(req, res);
 });
 
-app.post('/excluirFerramenta:id', (req, res) =>{
+app.post('https://toolmasters-api.onrender.com/excluirFerramenta:id', (req, res) =>{
     minhasFerramentasController.excluirFerramenta(req, res);
 });
 
