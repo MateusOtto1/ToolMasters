@@ -67,6 +67,11 @@ app.post('/excluirFerramenta:id', (req, res) =>{
     minhasFerramentasController.excluirFerramenta(req, res);
 });
 
+app.get('/sair', (req, res) =>{
+    delete req.session.user;
+    res.redirect('/');
+});
+
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });

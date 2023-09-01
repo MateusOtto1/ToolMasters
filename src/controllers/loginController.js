@@ -15,9 +15,6 @@ async function verificaLogin(req, res) {
                 nome: encontraUsuario.nome,
                 email: encontraUsuario.email
             }
-            req.session.onClose(() => {
-                req.session.destroy();
-            });
             console.log(req.session.user);
             res.redirect('/home');
         } else {
