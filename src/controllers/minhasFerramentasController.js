@@ -1,8 +1,6 @@
-const AutenticacaoMinhasFerramentas = require('./midlewareController');
 const ferramentaModel = require('../models/ferramentaModel');
 
 async function getMinhasFerramentas(req, res){
-    // AutenticacaoMinhasFerramentas.AutenticacaoMinhasFerramentas(req, res);
     const usuarios_idusuarios = req.session.user.id;
     try {
         const ferramentas = await ferramentaModel.minhasFerramentas(usuarios_idusuarios);
@@ -19,12 +17,12 @@ async function getMinhasFerramentas(req, res){
 function getEditar(req, res){
     const idcadastro_ferramenta = req.params.id;
     res.render('editar', { idcadastro_ferramenta });
-    console.log(idcadastro_ferramenta);
 }
 
 async function editarFerramenta(req, res){
-    const { idcadastro_ferramenta, nome_ferramenta, descricao, codigo, numero_serie, imagem } = req.body;
-    console.log(idcadastro_ferramenta);
+    const idcadastro_ferramenta = req.params.id;
+    const { nome_ferramenta, descricao, codigo, numero_serie, imagem } = req.body;
+    console.log("Pegando id: ",idcadastro_ferramenta);
     try {
         const cadastraFerramenta = await ferramentaModel.editaFerramenta(idcadastro_ferramenta, nome_ferramenta, descricao, codigo, numero_serie, imagem);
         if (cadastraFerramenta) {
@@ -40,4 +38,21 @@ async function editarFerramenta(req, res){
     }
 }
 
-module.exports = { getMinhasFerramentas, getEditar, editarFerramenta };
+async function excluirFerramenta(req, res){
+    const idcadastro_ferramenta = req.params.id;
+    try {
+        const excluirFerramenta = await ferramentaModel.excluirFerramenta(idcadastro_ferramenta);
+        if (excluirFerramenta) {
+            console.log(excluirFerramenta);
+            res.redirect('/home');
+        } else {
+            console.log("Ferramenta não cadastrada");
+            res.redirect('/minhasFerramentas');
+        }
+    } catch (error) {
+        console.error('Erro ao realizar o cadastro:', error);
+        res.redirect('/home');
+    }
+}
+
+module.exports = { getMinhasFerramentas, getEditar, editarFerramenta, excluirFerramenta };

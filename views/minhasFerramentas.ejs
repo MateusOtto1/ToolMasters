@@ -24,8 +24,7 @@
 
                 <div class="card__father">
                     <div class="card">
-                        <!-- style="background-image: url(/imagens/<%= ferramentas[i].imagem %>);" -->
-                        <div class="card__front" style="background-image: url(/imagens/martelo.png);">
+                        <div class="card__front" style='background-image: url("<%= ferramentas[i].imagem %>");'>
                             <div class="bg"></div>
                             <div class="body__card_front">
                                 <h1>
@@ -35,7 +34,7 @@
                         </div>
                         <div class="card__back">
                             <div class="body__card_back">
-                                <form class="container-btnLogin" action="/editarFerramenta/<%= ferramentas[i].idcadastro_ferramenta %>" method="get">
+                                <form class="container-btnLogin" action="/editarFerramenta<%= ferramentas[i].idcadastro_ferramenta %>" method="get">
                                     <button class="btnEditar">Editar</button>
                                 </form>
                                 <h3 class="nome-ferramenta-home">
@@ -53,7 +52,7 @@
                                 <h4 class="numero-serie-ferramenta-home">
                                     <%= ferramentas[i].numero_serie %>
                                 </h4>
-                                <form class="container-btnLogin" action="/excluir/<%= ferramentas[i].idcadastro_ferramenta %>" method="post">
+                                <form class="container-btnLogin" action="/excluirFerramenta<%= ferramentas[i].idcadastro_ferramenta %>" method="post">
                                     <button class="btnExcluir">Excluir</button>
                                 </form>
                             </div>

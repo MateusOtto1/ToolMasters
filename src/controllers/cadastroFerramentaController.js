@@ -1,8 +1,7 @@
-const AutenticacaoCadastroFerramenta = require('./midlewareController');
 const ferramentaModel = require('../models/ferramentaModel');
 
 function getCadastroFerramenta(req, res){
-    AutenticacaoCadastroFerramenta.AutenticacaoCadastroFerramenta(req, res);
+    res.render('cadastroFerramenta');
 }
 
 async function cadastroFerramenta(req, res){

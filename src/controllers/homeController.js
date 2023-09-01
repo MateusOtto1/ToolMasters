@@ -1,8 +1,6 @@
-const AutenticacaoHome = require('./midlewareController');
 const ferramentaModel = require('../models/ferramentaModel');
 
 async function getHome(req, res){
-    // AutenticacaoHome.AutenticacaoHome(req, res);
     try {
         const ferramentas = await ferramentaModel.getFerramentas();
         res.render('home', { ferramentas });

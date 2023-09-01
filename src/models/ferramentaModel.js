@@ -79,10 +79,9 @@ async function editaFerramenta(idcadastro_ferramenta, nome_ferramenta, descricao
     }
 }
 
-async function deletaFerramenta(idcadastro_ferramenta) {
+async function excluirFerramenta(idcadastro_ferramenta) {
     const sql = `DELETE FROM cadastro_ferramenta WHERE idcadastro_ferramenta = ?`;
     const values = [idcadastro_ferramenta];
-
     try {
         const connection = await db.connection();
         const [rows] = await connection.query(sql, values);
@@ -99,4 +98,4 @@ async function deletaFerramenta(idcadastro_ferramenta) {
     }
 }
 
-module.exports = { getFerramentas, cadastraFerramenta, minhasFerramentas, editaFerramenta, deletaFerramenta };
+module.exports = { getFerramentas, cadastraFerramenta, minhasFerramentas, editaFerramenta, excluirFerramenta };

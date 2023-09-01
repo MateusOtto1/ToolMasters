@@ -20,4 +20,5 @@ async function connection() {
         throw error;
     }
 }
+
 module.exports = { connection };
