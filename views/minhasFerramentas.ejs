@@ -33,28 +33,36 @@
                             </div>
                         </div>
                         <div class="card__back">
-                            <div class="body__card_back">
-                                <form class="container-btnLogin" action="/editarFerramenta<%= ferramentas[i].idcadastro_ferramenta %>" method="get">
-                                    <button class="btnEditar">Editar</button>
-                                </form>
-                                <h3 class="nome-ferramenta-home">
-                                    <%= ferramentas[i].nome_ferramenta %>
-                                </h3><br>
-                                <h4>Descrição</h4>
-                                <h4 class="descricao-ferramenta-home">
-                                    <%= ferramentas[i].descricao %>
-                                </h4><br>
-                                <h4>Código</h4>
-                                <h4 class="codigo-ferramenta-home">
-                                    <%= ferramentas[i].codigo %>
-                                </h4><br>
-                                <h4>Série</h4>
-                                <h4 class="numero-serie-ferramenta-home">
-                                    <%= ferramentas[i].numero_serie %>
-                                </h4>
-                                <form class="container-btnLogin" action="/excluirFerramenta<%= ferramentas[i].idcadastro_ferramenta %>" method="post">
-                                    <button class="btnExcluir">Excluir</button>
-                                </form>
+                            <div class="body__card_back_minhas">
+                                <div class="body__card_back_text">
+                                    <div class="body_text_back">
+                                        <form class="container-btnLogin"
+                                            action="/editarFerramenta<%= ferramentas[i].idcadastro_ferramenta %>"
+                                            method="get">
+                                            <button class="btnEditar">Editar</button>
+                                        </form>
+                                        <h3 class="nome-ferramenta-home">
+                                            <%= ferramentas[i].nome_ferramenta %>
+                                        </h3><br>
+                                        <h4>Descrição</h4>
+                                        <h4 class="descricao-ferramenta-home">
+                                            <%= ferramentas[i].descricao %>
+                                        </h4><br>
+                                        <h4>Código</h4>
+                                        <h4 class="codigo-ferramenta-home">
+                                            <%= ferramentas[i].codigo %>
+                                        </h4><br>
+                                        <h4>Série</h4>
+                                        <h4 class="numero-serie-ferramenta-home">
+                                            <%= ferramentas[i].numero_serie %>
+                                        </h4>
+                                        <form class="container-btnLogin"
+                                            action="/excluirFerramenta<%= ferramentas[i].idcadastro_ferramenta %>"
+                                            method="post">
+                                            <button class="btnExcluir">Excluir</button>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

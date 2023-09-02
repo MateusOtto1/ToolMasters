@@ -15,7 +15,19 @@ async function verificaCadastro(req, res) {
         } else {
             const cadastraUsuario = await userModel.cadastraUsuario(nome, email, senha);
             if (cadastraUsuario) {
-                res.redirect('/home');
+                const encontraUsuario = await userModel.verificaEmailSenha(email, senha);
+                if (encontraUsuario) {
+                    req.session.user = {
+                        id: encontraUsuario.idusuarios,
+                        nome: encontraUsuario.nome,
+                        email: encontraUsuario.email
+                    }
+                    console.log(req.session.user);
+                    res.redirect('/home');
+                } else {
+                    console.log("Usuário não cadastrado");
+                    res.redirect('/cadastro');
+                }
             } else {
                 console.log("Usuário não cadastrado");
                 res.redirect('/cadastro');

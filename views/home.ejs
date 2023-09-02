@@ -24,70 +24,45 @@
     <div class="container__fundo_card">
         <div class="container__card">
 
-            <% for (var i = 0; i < ferramentas.length; i++) { %>
+            <% for (var i=0; i < ferramentas.length; i++) { %>
                 <div class="card__father">
                     <div class="card">
-                          
+
                         <div class="card__front" style='background-image: url("<%= ferramentas[i].imagem %>");'>
                             <div class="bg"></div>
                             <div class="body__card_front">
-                                <h1><%= ferramentas[i].nome_ferramenta %></h1>
+                                <h1>
+                                    <%= ferramentas[i].nome_ferramenta %>
+                                </h1>
                             </div>
                         </div>
                         <div class="card__back">
                             <div class="body__card_back">
-                                <h3 class="nome-ferramenta-home"><%= ferramentas[i].nome_ferramenta %></h3><br>
-                                <h4>Descrição</h4>
-                                <h4 class="descricao-ferramenta-home"><%= ferramentas[i].descricao %></h4><br>
-                                <h4>Código</h4>
-                                <h4 class="codigo-ferramenta-home"><%= ferramentas[i].codigo %></h4><br>
-                                <h4>Série</h4>
-                                <h4 class="numero-serie-ferramenta-home"><%= ferramentas[i].numero_serie %></h4>
+                                <div class="body__card_back_text">
+                                    <div class="body_text_back">
+                                        <h3 class="nome-ferramenta-home">
+                                            <%= ferramentas[i].nome_ferramenta %>
+                                        </h3><br>
+                                        <h4>Descrição</h4>
+                                        <h4 class="descricao-ferramenta-home">
+                                            <%= ferramentas[i].descricao %>
+                                        </h4><br>
+                                        <h4>Código</h4>
+                                        <h4 class="codigo-ferramenta-home">
+                                            <%= ferramentas[i].codigo %>
+                                        </h4><br>
+                                        <h4>Série</h4>
+                                        <h4 class="numero-serie-ferramenta-home">
+                                            <%= ferramentas[i].numero_serie %>
+                                        </h4>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            <% } %>
+                <% } %>
 
-        </div>
-    </div>
-
-    <div class="container-minhas-ferramentas">
-        <div class="container-explica-ferramentas">
-            <h1 class="texto-minhas-ferramentas">Por que existem ferramentas?</h1>
-            <div class="cardExplicacao mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="/imagens/machado.jpg" class="img-fluid rounded-start imgCard-explicacao" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h2 class="card-title cardExplicacao-titulo">Criação das Ferramentas</h2>
-                            <h3 class="card-text cardExplicacao-texto">As ferramentas foram criadas para facilitar o
-                                trabalho manual dos
-                                profissionais. De tal forma que sua importância é muito grande nos tempos atuais. Já que
-                                cada vez mais a tecnologia vem dominando os mais diversos setores.</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="cardExplicacao mb-3">
-                <div class="row g-0">
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h2 class="card-title cardExplicacao-titulo">Por que Usar Ferramentas?</h2>
-                            <h3 class="card-text cardExplicacao-texto">Eficiência: Ferramentas são projetadas para
-                                facilitar tarefas e processos, muitas vezes tornando-os mais rápidos e eficientes do que
-                                se fossem realizados manualmente.<br>Qualidade: Muitas ferramentas são desenvolvidas
-                                para melhorar a qualidade do trabalho, garantindo resultados mais precisos e
-                                consistentes.</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="/imagens/serra.webp" class="img-fluid rounded-start imgCard-explicacao" alt="...">
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
