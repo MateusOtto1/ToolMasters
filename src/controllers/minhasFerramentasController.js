@@ -5,12 +5,13 @@ async function getMinhasFerramentas(req, res){
     try {
         const ferramentas = await ferramentaModel.minhasFerramentas(usuarios_idusuarios);
         if(ferramentas.length == 0){
-            res.redirect('/home');
+            res.redirect('/cadastroFerramenta');
+        }else{
+            res.render('minhasFerramentas', { ferramentas });
         }
-        res.render('minhasFerramentas', { ferramentas });
     } catch (error) {
         console.error('Erro ao achar ferramentas:', error);
-        res.redirect('/home');
+        res.redirect('/cadastroFerramenta');
     }
 }
 

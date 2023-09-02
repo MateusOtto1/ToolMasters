@@ -19,10 +19,8 @@ async function verificaLogin(req, res) {
             res.redirect('/home');
         } else {
             console.log("Usuário não cadastrado");
-            res.redirect('/');
+            res.redirect('/cadastro');
         }
-
-
 
     } catch (error) {
         console.error('Erro ao realizar o login:', error);
