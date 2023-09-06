@@ -1,11 +1,11 @@
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
-const loginController = require('./src/controllers/loginController');
-const homeController = require('./src/controllers/homeController');
-const cadastroController = require('./src/controllers/cadastroController');
-const cadastroFerramentaController = require('./src/controllers/cadastroFerramentaController');
-const minhasFerramentasController = require('./src/controllers/minhasFerramentasController');
-const Autenticacao = require('./src/controllers/midlewareController');
+const loginController = require('./controllers/loginController');
+const homeController = require('./controllers/homeController');
+const cadastroController = require('./controllers/cadastroController');
+const cadastroFerramentaController = require('./controllers/cadastroFerramentaController');
+const minhasFerramentasController = require('./controllers/minhasFerramentasController');
+const Autenticacao = require('./controllers/midlewareController');
 const app = express();
 const port = 5000;
 const session = require("express-session");
@@ -68,8 +68,7 @@ app.post('/excluirFerramenta:id', (req, res) =>{
 });
 
 app.get('/sair', (req, res) =>{
-    delete req.session.user;
-    res.redirect('/');
+    homeController.sair(req, res);
 });
 
 app.listen(port, () => {

@@ -10,4 +10,9 @@ async function getHome(req, res){
     }
 }
 
-module.exports = { getHome };
+async function sair(req, res){
+    delete req.session.user;
+    res.redirect('/');
+}
+
+module.exports = { getHome, sair };

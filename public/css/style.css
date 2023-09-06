@@ -651,9 +651,24 @@ body {
     border: none;
     outline: none;
     border-radius: 30px;
-    padding: 0 0 0 20px;
     color: #000;
     font-size: 1.2rem;
+    position: relative;
+    background-color: #fff;
+    cursor: pointer; 
+}
+
+.input-imagem-ferramenta input[type="file"] {
+    display: none;
+  }
+  
+.escolher-arquivo{
+    width:100%;
+    height:100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 900px) {

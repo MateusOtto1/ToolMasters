@@ -1,4 +1,5 @@
 const mysql = require('mysql2/promise');
+require("dotenv").config();
 
 async function connection() {
     try {
@@ -6,12 +7,12 @@ async function connection() {
             return global.connection;
         }
         const connection = await mysql.createConnection({
-            url: "mysql://root:1fFl2Xq6jIE8ePuxnSAE@containers-us-west-163.railway.app:7334/railway",
-            host: 'containers-us-west-163.railway.app',
-            user: 'root',
-            password: '1fFl2Xq6jIE8ePuxnSAE',
-            database: 'railway',
-            port: 7334
+            url: process.env.DB_URL,
+            host: process.env.DB_HOST,
+            user: process.env.DB_USER,
+            password: process.env.DB_PASSWORD,
+            database: process.env.DB_DATABASE,
+            port: process.env.DB_PORT
         });
 
         console.log("Banco conectado!");
