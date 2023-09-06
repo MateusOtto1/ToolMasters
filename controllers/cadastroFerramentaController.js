@@ -1,11 +1,12 @@
 const ferramentaModel = require('../models/ferramentaModel');
 
-function getCadastroFerramenta(req, res){
+function getCadastroFerramenta(req, res) {
     res.render('cadastroFerramenta');
 }
 
-async function cadastroFerramenta(req, res){
-    const { nome_ferramenta, descricao, codigo, numero_serie, imagem } = req.body;
+async function cadastroFerramenta(req, res) {
+    const { nome_ferramenta, descricao, codigo, numero_serie } = req.body;
+    const imagem = req.file.filename;
     const usuarios_idusuarios = req.session.user.id;
     try {
         const cadastraFerramenta = await ferramentaModel.cadastraFerramenta(nome_ferramenta, descricao, codigo, numero_serie, imagem, usuarios_idusuarios);

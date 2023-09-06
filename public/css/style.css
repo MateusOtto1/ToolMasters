@@ -503,6 +503,10 @@ body {
     border-radius: 10px;
 }
 
+.titulo-nomes{
+    color:#F99D5A;
+}
+
 .footer {
     background-color: #0f0f0f;
     width: 100%;

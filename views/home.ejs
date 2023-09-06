@@ -27,8 +27,7 @@
             <% for (var i=0; i < ferramentas.length; i++) { %>
                 <div class="card__father">
                     <div class="card">
-
-                        <div class="card__front" style='background-image: url("<%= ferramentas[i].imagem %>");'>
+                        <div class="card__front" style='background-image: url("/uploads/<%= ferramentas[i].imagem %>");'>
                             <div class="bg"></div>
                             <div class="body__card_front">
                                 <h1>
@@ -40,19 +39,20 @@
                             <div class="body__card_back">
                                 <div class="body__card_back_text">
                                     <div class="body_text_back">
-                                        <h3 class="nome-ferramenta-home">
+                                        <h4>Nome Ferramenta</h4>
+                                        <h3 class="nome-ferramenta-home titulo-nomes">
                                             <%= ferramentas[i].nome_ferramenta %>
                                         </h3><br>
-                                        <h4>Descrição</h4>
-                                        <h4 class="descricao-ferramenta-home">
+                                        <h4>Descrição Ferramenta</h4>
+                                        <h4 class="descricao-ferramenta-home titulo-nomes">
                                             <%= ferramentas[i].descricao %>
                                         </h4><br>
-                                        <h4>Código</h4>
-                                        <h4 class="codigo-ferramenta-home">
+                                        <h4>Código Ferramenta</h4>
+                                        <h4 class="codigo-ferramenta-home titulo-nomes">
                                             <%= ferramentas[i].codigo %>
                                         </h4><br>
-                                        <h4>Série</h4>
-                                        <h4 class="numero-serie-ferramenta-home">
+                                        <h4>Série Ferramenta</h4>
+                                        <h4 class="numero-serie-ferramenta-home titulo-nomes">
                                             <%= ferramentas[i].numero_serie %>
                                         </h4>
                                     </div>

@@ -22,7 +22,8 @@ function getEditar(req, res){
 
 async function editarFerramenta(req, res){
     const idcadastro_ferramenta = req.params.id;
-    const { nome_ferramenta, descricao, codigo, numero_serie, imagem } = req.body;
+    const { nome_ferramenta, descricao, codigo, numero_serie } = req.body;
+    const imagem = req.file.filename;
     console.log("Pegando id: ",idcadastro_ferramenta);
     try {
         const cadastraFerramenta = await ferramentaModel.editaFerramenta(idcadastro_ferramenta, nome_ferramenta, descricao, codigo, numero_serie, imagem);
