@@ -12,16 +12,16 @@ const session = require("express-session");
 const multer = require('multer');
 
 const storage = multer.diskStorage({
-    destination: './uploads',
+    destination: './public/img',
     filename: (req, file, cb) => {
         const filename = file.originalname;
         cb(null, filename);
     }
 });
 
-const uploads = multer({ storage });
+const img = multer({ storage });
 
-app.use('/uploads', express.static(__dirname + '/uploads'));
+app.use('/img', express.static(__dirname + '/img'));
 app.use(express.json());
 app.use(session({ secret: "ToolMasters" }));
 app.set('view engine', 'ejs');
@@ -57,7 +57,7 @@ app.get('/cadastroFerramenta', Autenticacao, (req, res) => {
     cadastroFerramentaController.getCadastroFerramenta(req, res);
 });
 
-app.post('/cadastroFerramenta', uploads.single('imagem'), (req, res) => {
+app.post('/cadastroFerramenta', img.single('imagem'), (req, res) => {
     cadastroFerramentaController.cadastroFerramenta(req, res);
 });
 
@@ -71,7 +71,7 @@ app.get('/editarFerramenta:id', Autenticacao, (req, res) => {
     minhasFerramentasController.getEditar(req, res);
 });
 
-app.post('/editarFerramenta:id', uploads.single('imagem'), (req, res) => {
+app.post('/editarFerramenta:id', img.single('imagem'), (req, res) => {
     minhasFerramentasController.editarFerramenta(req, res);
 });
 
